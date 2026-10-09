@@ -1,45 +1,32 @@
-    # FASTAPI - Projeto de Exemplo
+FastAPI - Projeto de Exemplo
 
-    Este é um projeto de API web construído com FastAPI, organizado em camadas de modelo, controlador, visão e rotas. 
-    O objetivo é demonstrar um padrão de arquitetura claro, com validação de entrada, persistência em banco de dados 
-    SQLite assíncrono e rotas REST para cadastro e consulta de usuários.
+Desenvolvi este projeto para demonstrar a criação de uma API web utilizando FastAPI, com uma arquitetura organizada em camadas para separar responsabilidades e facilitar a manutenção do código.
 
-    ## Visão geral do projeto
+Utilizei SQLite assíncrono para persistência de dados, Pydantic para validação de entradas e rotas REST para cadastro e consulta de usuários.
 
-    - `src/main/server/server.py` - inicia a aplicação FastAPI e registra as rotas.
-    - `src/main/routes/users_routes.py` - define os endpoints de criação e busca de usuários.
-    - `src/main/composer/` - monta as dependências entre modelos, controladores e views.
-    - `src/controllers/` - contém a lógica de negócios para registrar e buscar usuários.
-    - `src/models/` - inclui entidades, repositórios e configuração do banco de dados.
-    - `src/views/` - abstrai a conversão entre requisições HTTP internas e respostas.
-    - `src/validators/` - valida os dados de entrada usando Pydantic.
+Estrutura do projeto
 
-    ## Como executar
+src/main/server/server.py — inicializo a aplicação e registro as rotas.
 
-    1. Instale as dependências listadas em `requirements.txt`.
-    2. Execute o servidor com:
+src/main/routes/users_routes.py — defino os endpoints de criação e busca de usuários.
 
-    ```bash
-    python run.py
-    ```
+src/main/composer/ — organizo as dependências entre os componentes.
 
-    ## Endpoints disponíveis
+src/controllers/ — implemento a lógica de negócio para cadastro e consulta de usuários.
 
-    - `POST /users` - cadastra um usuário.
-    - `GET /users/{username}` - busca um usuário pelo nome de usuário.
+src/models/ — estruturo as entidades, os repositórios e a configuração do banco de dados.
 
-    ## Visual da branch atual
+src/views/ — organizo a conversão de requisições e respostas HTTP.
 
-    A branch ativa do repositório é:
+src/validators/ — valido os dados de entrada utilizando Pydantic.
 
-    ```bash
-    * main
-    ```
 
-    Estrutura de branches do projeto:
+Como executar:
+Instalei as dependências listadas em requirements.txt:
 
-    ```text
-    main    # branch principal com a implementação atual do projeto
-    ```
+pip install -r requirements.txt
 
+Para iniciar o servidor, execute:
+
+python run.py
 
